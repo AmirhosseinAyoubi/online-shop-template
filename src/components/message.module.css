@@ -1,0 +1,22 @@
+.message_container {
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+
+.error {
+    background-color: rgb(231, 106, 83);
+}
+
+.success {
+    background-color: rgb(54, 192, 88);
+}
+
+.alert {
+    background-color: rgb(56, 140, 219);
+}

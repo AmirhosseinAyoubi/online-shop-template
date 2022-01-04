@@ -1,0 +1,141 @@
+.loginPage_container {
+    padding-top: 120px;
+    width: 100%;
+    padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding-top: 120px;
+}
+
+.loginPage_container form {
+    margin-top: 20px;
+    width: 500px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.loginPage_container h3 {
+    font-size: 15px;
+    align-self: flex-start;
+}
+
+.form_group {
+    width: 100%;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd !important;
+    background-color: transparent;
+    outline: 0;
+    margin-top: 20px;
+
+}
+
+.form_group input::placeholder {
+    font-size: 14px;
+    color: rgb(187, 185, 185);
+}
+
+.form_group button {
+    width: 100%;
+    background-color: #fcb800;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+    margin-top: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.form_group p {
+    font-size: 13px;
+    color: rgb(109, 108, 108);
+}
+
+.socialMedia {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.socialMedia span {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.faceBook {
+    background-color: #3b5999;
+}
+
+.google {
+    background-color: #dd4b39;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.instagram {
+    background-color: #e4405f;
+}
+
+.error {
+    color: tomato;
+    font-size: 12px;
+}
+
+.login_error {
+    width: fit-content;
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.login_register_path {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    padding: 10px 50px;
+}
+
+.login_register_path li {
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.login_register_path li a {
+    color: #666;
+}
+
+.active {
+    color: black !important;
+}
+form{
+    position: relative;
+}
+.login_loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

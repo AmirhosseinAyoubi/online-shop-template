@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import { Route, Routes, useNavigate } from "react-router-dom"
+import 'react-sticky-header/styles.css';
+import StickyHeader from 'react-sticky-header';
+import Header from "./components/Header";
+import Home from "./pages/Home"
+import store from "./store"
+import Footer from "./components/Footer";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart"
+import CategoriesPage from "./pages/CategoriesPage";
+import LoginPage from "./pages/LoginPage";
+import SignUp from "./pages/SignUp"
+import { ToastContainer } from 'react-toastify';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <StickyHeader header={<Header />} />
+      <Routes>
+        <Route element={<Cart />} path="/cart" />
+        <Route element={<ProductDetails />} path="/products/:id" />
+        <Route element={<CategoriesPage />} path="/category/:category" />
+        <Route element={<LoginPage />} path="/login" />
+        <Route element={<SignUp />} path="/signup" />
+        <Route element={<Home />} path="/" />
+      </Routes>
+      <Footer />
+      <ToastContainer />
+    </Provider>
   );
 }
 

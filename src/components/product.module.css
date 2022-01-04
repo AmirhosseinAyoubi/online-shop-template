@@ -1,0 +1,138 @@
+.card {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 50px 40px 20px 40px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.product_card_container {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a .card {
+
+    color: black !important;
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.product_name {
+    font-size: 16px;
+    text-align: center;
+}
+
+.product_price {
+    font-size: 16px;
+    color: #212529;
+}
+
+.product_raiting {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.detail_btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.card:hover .detail_btn_container {
+    opacity: 1;
+    visibility: visible;
+}
+
+.detail_btn_container button {
+    width: 150px;
+    border-radius: 2px;
+    background-color: #ffdd40cc;
+    border: 0;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width:992px) {
+    .card img {
+        width: 90%;
+    }
+    .product_name {
+        font-size: 15px;
+    }
+
+    .product_raiting {
+        display: flex;
+        align-items: center;
+        font-size: 9px;
+    }
+    .card {
+        padding: 30px 30px 20px 30px;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .card img {
+        width: 80%;
+    }
+    .product_name {
+        font-size: 14px;
+    }
+
+    .product_raiting {
+        display: flex;
+        align-items: center;
+        font-size: 8px;
+    }
+
+    .card {
+        padding: 30px 30px 20px 30px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .card img {
+        width: 70%;
+    }
+    .product_name {
+        font-size: 13px;
+    }
+
+    .product_raiting {
+        display: flex;
+        align-items: center;
+        font-size: 8px;
+    }
+
+    .card {
+        padding: 30px 20px 20px 20px;
+        height: 300px;
+    }
+}

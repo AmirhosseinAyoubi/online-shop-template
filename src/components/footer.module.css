@@ -1,0 +1,144 @@
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: white;
+    /* margin-top: 100px; */
+    padding: 50px 300px;
+
+}
+
+.footer_container_top {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.shop_desc {
+    width: 30%;
+}
+
+.shop_desc h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.shop_desc p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.contact_footer {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.contact_footer h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact_footer ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.contact_footer ul li span:nth-of-type(1) {
+    margin-bottom: 5px;
+
+}
+
+.contact_footer ul li span:nth-of-type(2) {
+    padding-left: 15px;
+    content: "";
+    border-left: 1px solid #fff;
+
+}
+
+.follow_us {
+    width: 30%;
+
+}
+
+.follow_us h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.follow_us ul {
+    display: flex;
+    padding: 0;
+}
+
+.follow_us ul li {
+    list-style-type: none;
+    margin-right: 15px;
+    background-color: rgba(133, 131, 131, 0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.follow_us ul li:hover {
+    background-color: rgba(133, 131, 131, 0.5);
+
+}
+
+.license {
+    padding-top: 50px;
+    width: 40%;
+    font-size: 12px;
+}
+
+@media screen and (max-width:1200px) {
+    .footer_container {
+        margin-top: 70px;
+        padding: 50px 120px;
+
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    .footer_container {
+        margin-top: 70px;
+        padding: 50px 100px;
+
+    }
+    .footer_container_top {
+        flex-direction: column;
+    }
+
+    .shop_desc,
+    .follow_us,
+    .license,
+    .contact_footer {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .footer_container {
+        margin-top: 70px;
+        padding: 50px 70px;
+
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer_container {
+        margin-top: 70px;
+        padding: 50px 30px;
+
+    }
+}
