@@ -16,8 +16,8 @@ function CategoriesPage() {
     const { products, error, loading } = categoryProducts
     useEffect(() => {
         dispatch(getCategoryProducts(category))
-        window.scrollTo(0,0)
-    }, [category]);
+        window.scrollTo(0, 0)
+    }, [category, dispatch]);
 
     return (
         <Container>
@@ -27,19 +27,16 @@ function CategoriesPage() {
                         : error ? <Message message={error} error="error" /> :
                             products.map((product, index) => {
                                 if (index + 1 === products.length) {
-                                    return (
-                                        <>
-                                            <Product
-                                                key={product.id}
-                                                id={product.id}
-                                                name={product.title}
-                                                image={product.image}
-                                                price={product.price}
-                                                rating={product.rating.rate}
-                                            />
-                                            <News id={product.id} image={product.image} name={product.title} />
-                                        </>
-                                    )
+                                    return <>
+                                        <Product
+                                            id={product.id}
+                                            name={product.title}
+                                            image={product.image}
+                                            price={product.price}
+                                            rating={product.rating.rate}
+                                        />
+                                        <News id={product.id} image={product.image} name={product.title} />
+                                    </>
                                 }
                                 return (
                                     <Product
@@ -51,13 +48,17 @@ function CategoriesPage() {
                                         rating={product.rating.rate}
                                     />
                                 )
+
                             })
+
+
                 }
             </div>
 
 
 
-        </Container>
+
+        </Container >
     )
 }
 

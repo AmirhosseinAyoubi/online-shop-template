@@ -5,7 +5,7 @@ import { rootReducer } from "./rootReducer"
 
 
 
-const cartItemsLocalStorage = localStorage.cartItems.length > 0 ? JSON.parse(localStorage.cartItems) : []
+const cartItemsLocalStorage = (localStorage.cartItems&& localStorage.cartItems.length > 0) ? JSON.parse(localStorage.cartItems) : []
 
 const initialState = {
     cart: { cartItems: cartItemsLocalStorage }

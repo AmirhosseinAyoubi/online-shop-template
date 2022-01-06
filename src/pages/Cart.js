@@ -81,7 +81,7 @@ function Cart() {
                                                 {
                                                     cartItems.map(item => {
                                                         return (
-                                                            <li>
+                                                            <li key={item.id}>
                                                                 <span>{shortName(item.title)}</span><br />
                                                                 <span>x{item.quantity}</span>
                                                             </li>

@@ -36,11 +36,14 @@ function Header() {
                     </Link>
                     <div >
                         <ul className={click ? `${style.nav_menu} ${style.active}` : style.nav_menu}>
-                            {categories.length > 0 ? categories.map(item => <li key={item} className={style.nav_item}>
-                                <Link to={`/category/${item}`} onClick={click ? handleClick : null}>
-                                    {item}
-                                </Link>
-                            </li>) : null}
+                            {categories.length > 0 ? categories.map(item =>
+                                <li key={item} className={style.nav_item}>
+                                    <Link to={`/category/${item}`} onClick={click ? handleClick : null}>
+                                        {item}
+                                    </Link>
+                                </li>
+                            )
+                                : null}
 
                             <li className={`${style.shopping_cart_icon} ${style.nav_item}`}>
 
@@ -52,15 +55,15 @@ function Header() {
 
                                 </Link>
                             </li>
-                            <li>
-                                {
-                                    (user&& user.data.token)?
-                                    <Dropdown name={JSON.parse(user.config.data).username} />:
-                                <li className={style.nav_item}><Link to={"/login"}>Login</Link></li>
-                                    
-                                }
-                                
-                            </li>
+
+                            {
+                                (user && user.data.token) ?
+                                    <Dropdown name={JSON.parse(user.config.data).username} /> :
+                                    <li className={style.nav_item}><Link to={"/login"} onClick={click ? handleClick : null} >Login</Link></li>
+
+                            }
+
+
                         </ul>
 
                     </div>

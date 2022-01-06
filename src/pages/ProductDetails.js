@@ -28,7 +28,7 @@ function ProductDetails() {
     useEffect(() => {
         dispatch(getProductDetails(id))
         dispatch(getProductsCategories())
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [id]);
 
     const addToCartHandler = (e) => {
@@ -54,17 +54,18 @@ function ProductDetails() {
                                             <form >
                                                 <span className={style.product_details_inputs}>
                                                     <label>select color:</label>
-                                                    <select name="color" disabled value={productColor}
+                                                    <select name="color" disabled defaultValue={productColor}
                                                         onChange={(e) => setProductColor(e.target.value)}>
-                                                        <option selected>choose an option</option>
+                                                        <option>choose an option</option>
 
                                                     </select>
                                                 </span>
                                                 <span className={style.product_details_inputs}>
                                                     <label >select size:</label>
-                                                    <select name="size" disabled value={productSize}
+                                                    <select name="size" disabled
+                                                        defaultValue={productSize}
                                                         onChange={(e) => setProductSize(e.target.value)}>
-                                                        <option selected>choose an option</option>
+                                                        <option>choose an option</option>
                                                     </select>
                                                 </span>
                                                 <span className={style.product_details_inputs}>
@@ -124,8 +125,8 @@ function ProductDetails() {
                                 <h3>Product categories</h3>
                                 <ul>
                                     {
-                                        categories && categories.map((item, index) => <Link to={`/category/${item}`}>
-                                            <li key={index}>{item}</li>
+                                        categories && categories.map(item => <Link key={item} to={`/category/${item}`}>
+                                            <li>{item}</li>
                                         </Link>)
                                     }
                                 </ul>

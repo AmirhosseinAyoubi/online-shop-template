@@ -15,7 +15,7 @@ function Slider() {
     const { loading, error, sliderList } = slider
     useEffect(() => {
         dispatch(getSliderList())
-    }, []);
+    }, [dispatch]);
 
 
 
@@ -29,7 +29,7 @@ function Slider() {
                                 sliderList.map(item => {
                                     return (
                                         <Link to={`/products/${item.id}`} key={item.id}>
-                                            <div  className={style.slide_content}>
+                                            <div className={style.slide_content}>
                                                 <img src={item.image} alt={item.title} />
                                                 <div className={style.lable}>
                                                     <p className={style.category}>{item.category}</p>
