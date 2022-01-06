@@ -1,9 +1,9 @@
-import axios from "axios"
+import instance from "../axios"
 import { ADD_TO_CART, ADD_TO_CART_REQUEST, REMOVE_FROM_CART } from "../constants/cartConstants"
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
     dispatch({ type: ADD_TO_CART_REQUEST })
-    await axios.get(`https://fakestoreapi.com/products/${id}`)
+    await instance.get(`https://fakestoreapi.com/products/${id}`)
         .then(res => dispatch({
             type: ADD_TO_CART, payload: {
                 id: res.data.id,
@@ -20,7 +20,7 @@ export const addToCart = (id, quantity) => async (dispatch, getState) => {
 }
 
 export const removeFromCart = (id) => async (dispatch, getState) => {
-    await axios.get(`https://fakestoreapi.com/products/${id}`)
+    await instance.get(`https://fakestoreapi.com/products/${id}`)
         .then(res => dispatch({
             type: REMOVE_FROM_CART, payload: res.data
         }))

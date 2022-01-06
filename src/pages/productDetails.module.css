@@ -33,7 +33,7 @@
 }
 
 .product_info img {
-    width: 40%;
+    width: 30%;
     object-fit: contain;
 }
 
@@ -79,6 +79,10 @@
 
 .product_category span {
     color: #fcb800;
+}
+
+.product_details_tab {
+    margin-bottom: 150px;
 }
 
 .product_details_tab h2 {
@@ -247,7 +251,7 @@
     }
 
     .product_info img {
-        width: 80%;
+        width: 60%;
     }
 
     .product_details_inputs {

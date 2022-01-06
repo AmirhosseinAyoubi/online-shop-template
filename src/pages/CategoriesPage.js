@@ -17,6 +17,7 @@ function CategoriesPage() {
     const { products, error, loading } = categoryProducts
     useEffect(() => {
         dispatch(getCategoryProducts(category))
+        window.scrollTo(0,0)
     }, [category]);
 
     return (
@@ -37,7 +38,7 @@ function CategoriesPage() {
                                                 price={product.price}
                                                 rating={product.rating.rate}
                                             />
-                                            <News image={product.image} name={product.title} />
+                                            <News id={product.id} image={product.image} name={product.title} />
                                         </>
                                     )
                                 }

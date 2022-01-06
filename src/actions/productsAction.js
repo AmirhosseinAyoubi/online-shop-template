@@ -1,4 +1,4 @@
-import axios from "axios"
+import instance from "../axios"
 import {
     ALL_PRODUCTS_LIST_FAIL,
     ALL_PRODUCTS_LIST_REQUEST,
@@ -18,7 +18,7 @@ import {
 
 export const getProductsCategories = () => async (dispatch) => {
     dispatch({ type: PRODUCTS_CATEGORY_LIST_REQUEST })
-    await axios.get('https://fakestoreapi.com/products/categories')
+    await instance.get('https://fakestoreapi.com/products/categories')
         .then(res => dispatch({ type: PRODUCTS_CATEGORY_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCTS_CATEGORY_LIST_FAIL, payload: err.message }))
 }
@@ -26,7 +26,7 @@ export const getProductsCategories = () => async (dispatch) => {
 
 export const getALLProducts = () => async (dispatch) => {
     dispatch({ type: ALL_PRODUCTS_LIST_REQUEST })
-    await axios.get('https://fakestoreapi.com/products')
+    await instance.get('https://fakestoreapi.com/products')
         .then(res => dispatch({ type: ALL_PRODUCTS_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: ALL_PRODUCTS_LIST_FAIL, payload: err.message }))
 }
@@ -34,7 +34,7 @@ export const getALLProducts = () => async (dispatch) => {
 
 export const getProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
-    await axios.get(`https://fakestoreapi.com/products/${id}`)
+    await instance.get(`https://fakestoreapi.com/products/${id}`)
         .then(res => dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCT_DETAILS_FAIL, payload: err.message }))
 }
@@ -44,7 +44,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 
 export const getCategoryProducts = (category) => async (dispatch) => {
     dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_REQUEST })
-    await axios.get(`https://fakestoreapi.com/products/category/${category}`)
+    await instance.get(`https://fakestoreapi.com/products/category/${category}`)
         .then(res => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_FAIL, payload: err.message }))
 }

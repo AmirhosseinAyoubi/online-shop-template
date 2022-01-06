@@ -31,6 +31,7 @@ function LoginPage() {
         if (user && user.data.token) {
             navigate("/")
         }
+        window.scrollTo(0,0)
     }, [user]);
 
 

@@ -26,6 +26,7 @@ function SignUp() {
         })
     useEffect(() => {
         user && notify("You Signed Up Successfully", "success")
+        window.scrollTo(0,0)
 
     }, [user]);
 

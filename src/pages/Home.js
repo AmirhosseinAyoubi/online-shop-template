@@ -20,6 +20,8 @@ function Home() {
     useEffect(() => {
         dispatch(getProductsCategories())
         dispatch(getALLProducts())
+        window.scrollTo(0,0)
+
     }, []);
 
     return (
@@ -53,7 +55,7 @@ function Home() {
                                             products.map(product => {
                                                 if (product.category == item && cnt_news < 1) {
                                                     cnt_news++
-                                                    return <News key={product.id} image={product.image} name={product.name} iseven={categories.indexOf(item) % 2 !== 0} />
+                                                    return <News id={product.id} key={product.id} image={product.image} name={product.name} iseven={categories.indexOf(item) % 2 !== 0} />
                                                 }
 
                                             })

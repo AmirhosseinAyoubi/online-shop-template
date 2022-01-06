@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from "react-redux"
 import CartItems from '../components/CartItems'
 import Container from '../components/Container'
@@ -22,6 +22,9 @@ function Cart() {
             navigate('/shipping')
         }
     }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <Container>
             {loading ? <Loader /> :
