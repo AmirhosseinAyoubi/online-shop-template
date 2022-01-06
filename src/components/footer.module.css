@@ -100,7 +100,6 @@
 
 @media screen and (max-width:1200px) {
     .footer_container {
-        margin-top: 70px;
         padding: 50px 120px;
 
     }
@@ -109,7 +108,6 @@
 
 @media screen and (max-width:992px) {
     .footer_container {
-        margin-top: 70px;
         padding: 50px 100px;
 
     }
@@ -128,7 +126,6 @@
 
 @media screen and (max-width:768px) {
     .footer_container {
-        margin-top: 70px;
         padding: 50px 70px;
 
     }
@@ -136,7 +133,6 @@
 
 @media screen and (max-width:600px) {
     .footer_container {
-        margin-top: 70px;
         padding: 50px 30px;
 
     }

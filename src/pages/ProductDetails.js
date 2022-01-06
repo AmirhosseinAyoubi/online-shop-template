@@ -70,7 +70,7 @@ function ProductDetails() {
                                                 </span>
                                                 <span className={style.product_details_inputs}>
                                                     <input type={"number"} name='count'
-                                                        value={productCount}
+                                                        defaultValue={productCount}
                                                         min={1}
                                                         max={10}
                                                         onChange={(e) => e.target.value > 0 && setProductCount(e.target.value)}

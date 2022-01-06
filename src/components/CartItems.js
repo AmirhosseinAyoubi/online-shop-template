@@ -28,7 +28,9 @@ function CartItems({ name, image, price, quantity, id }) {
 
             <td>
                 <input type="number"
-                    value={productCnt}
+                    defaultValue={productCnt}
+                    min={1}
+                    max={100}
                     className={style.cart_items_count_input}
                     onChange={(e) => e.target.value > 0 && setProductCnt(e.target.value)}
                 />

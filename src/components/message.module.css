@@ -20,3 +20,11 @@
 .alert {
     background-color: rgb(56, 140, 219);
 }
+
+@media screen and (max-width:600px) {
+    .message_container span {
+        font-size: 14px !important;
+
+    }
+
+}

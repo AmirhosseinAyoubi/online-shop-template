@@ -1,5 +1,4 @@
 .loginPage_container {
-    padding-top: 120px;
     width: 100%;
     padding: 100px 200px;
     display: flex;
@@ -138,4 +137,53 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width:992px) {
+    .loginPage_container {
+        padding:100px 120px;
+    }
+    .loginPage_container form {
+        margin-top: 10px;
+        width: 400px;
+        padding: 30px;
+    }
+    .socialMedia span {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        color: white;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:600px) {
+    .loginPage_container form {
+        width: 330px;
+        padding: 20px;
+
+    }
+    .loginPage_container {
+        padding:100px 80px;
+    }
+    .loginPage_container h3 {
+        font-size: 13px;
+    }
+    .form_group input {
+        width: 100%;
+        padding: 10px 20px;
+        border: 1px solid #ddd !important;
+        background-color: transparent;
+        outline: 0;
+        margin-top: 20px;
+    
+    }
+    .login_register_path {
+    width: 100%;
+    }
+    .login_error{
+        font-size: 14px;
+    }
+    
 }
