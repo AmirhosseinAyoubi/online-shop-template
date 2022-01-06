@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom';
 import style from "./dropdown.module.css"
 import { MdArrowDropDown } from "react-icons/md"
 import { useDispatch } from "react-redux"

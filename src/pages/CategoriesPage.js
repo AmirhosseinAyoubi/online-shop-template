@@ -7,7 +7,6 @@ import Product from '../components/Product'
 import { getCategoryProducts } from '../actions/productsAction'
 import Container from '../components/Container'
 import style from "./categoriesPage.module.css"
-import ReactPaginate from 'react-paginate';
 import News from "../components/News"
 
 function CategoriesPage() {

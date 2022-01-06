@@ -15,9 +15,8 @@ import { notify } from '../components/Toastify';
 function SignUp() {
     const dispatch = useDispatch()
     const userSignUp = useSelector(state => state.userSignUp)
-    const userLogin = useSelector(state => state.userLogin)
 
-    const { error, loading, user } = userSignUp
+    const { user } = userSignUp
 
     const location = useLocation()
     const { register, handleSubmit, formState: { errors } } = useForm(

@@ -11,7 +11,7 @@ function News({ image, name, iseven, id }) {
                     <div className={style.news_box}>
                         <h3>What's News?</h3>
                         <p>discover our range of products</p>
-                       <Link to={`/products/${id}`}> <button>Shop Now</button></Link>
+                       <Link to={`/products/${id}`} className={style.shop_now_btn}> <button>Shop Now</button></Link>
                     </div>
                 </div>
             </div>

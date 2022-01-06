@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
+    width: 100%;
     padding: 30px 70px;
 }
 
@@ -48,12 +48,19 @@
 .news_box {
     width: 50%;
     display: flex;
-flex-direction: column;
-align-items: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+.shop_now_btn {
+    height: fit-content !important;
+    width: fit-content !important;
+}
+
 @media screen and (max-width:992px) {
-    
-    
+
+
     .news_container img {
         width: 120px;
     }

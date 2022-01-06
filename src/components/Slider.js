@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import iphone10 from "../assets/iphone10.jpg"
-import iphone11 from "../assets/iphone11.jpg"
-import iphone12 from "../assets/iphone12.jpg"
 import style from "./slider.module.css"
 import { useSelector, useDispatch } from "react-redux"
 import { getSliderList } from '../actions/sliderAction';

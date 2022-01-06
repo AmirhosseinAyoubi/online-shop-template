@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { Route, Routes, useNavigate } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import 'react-sticky-header/styles.css';
 import StickyHeader from 'react-sticky-header';
 import Header from "./components/Header";
@@ -12,17 +12,18 @@ import CategoriesPage from "./pages/CategoriesPage";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp"
 import { ToastContainer } from 'react-toastify';
-
+import NotFound from "./components/NotFound";
 
 
 function App() {
 
-  
+
 
   return (
     <Provider store={store}>
       <StickyHeader header={<Header />} />
       <Routes>
+        <Route path='*' element={<NotFound />} />
         <Route element={<Cart />} path="/cart" />
         <Route element={<ProductDetails />} path="/products/:id" />
         <Route element={<CategoriesPage />} path="/category/:category" />

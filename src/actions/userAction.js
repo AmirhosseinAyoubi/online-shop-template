@@ -1,11 +1,18 @@
 import instance from "../axios"
-import { USER_LOGIN_FAIL, USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS, USER_LOGOUT, USER_SIGNUP_FAIL, USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS } from "../constants/userConstants";
+import {
+    USER_LOGIN_FAIL,
+    USER_LOGIN_REQUEST,
+    USER_LOGIN_SUCCESS,
+    USER_LOGOUT, USER_SIGNUP_FAIL,
+    USER_SIGNUP_REQUEST,
+    USER_SIGNUP_SUCCESS
+} from "../constants/userConstants";
 
 // user login 
 
 export const loginUser = (username, password) => async (dispatch, getState) => {
     dispatch({ type: USER_LOGIN_REQUEST })
-    await instance.post("https://fakestoreapi.com/auth/login", { username, password },
+    await instance.post("/auth/login", { username, password },
         {
             headers: {
                 "Content-Type": "application/json"
@@ -19,11 +26,12 @@ export const userLogout = () => (dispatch) => {
     dispatch({ type: USER_LOGOUT })
 }
 
-// user signup this is a fake sign up and doesn't save in database
+// user signup 
+//this is a fake sign up and doesn't save in database
 
 export const signUpUser = (username, email, password) => async (dispatch, getState) => {
     dispatch({ type: USER_SIGNUP_REQUEST })
-    await instance.post("https://fakestoreapi.com/users",
+    await instance.post("/users",
         {
             "email": email,
             "username": username,

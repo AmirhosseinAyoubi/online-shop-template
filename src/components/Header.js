@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { GrCart } from "react-icons/gr"
 import { GoThreeBars } from "react-icons/go"
 import { TiTimes } from "react-icons/ti"

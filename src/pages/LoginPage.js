@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { loginUser } from '../actions/userAction';
 import style from "./loginPage.module.css"
-import Container from "../components/Container"
 import { LoginValidation } from '../validation/loginValidation';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -10,10 +9,7 @@ import { FaFacebookF } from "react-icons/fa"
 import { ImGooglePlus } from "react-icons/im"
 import { BsTwitter } from "react-icons/bs"
 import { AiOutlineInstagram } from "react-icons/ai"
-import Message from "../components/Message"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import { notify } from '../components/Toastify';
-import Loader from '../components/Loader';
 import spinner from "../assets/Spin-0.6s-164px.gif"
 
 function LoginPage() {
@@ -32,7 +28,7 @@ function LoginPage() {
             navigate("/")
         }
         window.scrollTo(0,0)
-    }, [user]);
+    }, [user,navigate]);
 
 
     const loginSubmithandler = (data) => {
