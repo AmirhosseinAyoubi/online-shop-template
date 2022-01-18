@@ -16,25 +16,25 @@ import {
 
 //get products  categories
 
-export const getProductsCategories = () => (dispatch) => {
+export const getProductsCategories = () => async (dispatch) => {
     dispatch({ type: PRODUCTS_CATEGORY_LIST_REQUEST })
-    instance.get('/products/categories')
+    await instance.get('/products/categories')
         .then(res => dispatch({ type: PRODUCTS_CATEGORY_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCTS_CATEGORY_LIST_FAIL, payload: err.message }))
 }
 //get all products list
 
-export const getALLProducts = () => (dispatch) => {
+export const getALLProducts = () => async (dispatch) => {
     dispatch({ type: ALL_PRODUCTS_LIST_REQUEST })
-    instance.get('/products')
+    await instance.get('/products')
         .then(res => dispatch({ type: ALL_PRODUCTS_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: ALL_PRODUCTS_LIST_FAIL, payload: err.message }))
 }
 //get product details
 
-export const getProductDetails = (id) => (dispatch) => {
+export const getProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
-    instance.get(`/products/${id}`)
+    await instance.get(`/products/${id}`)
         .then(res => dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCT_DETAILS_FAIL, payload: err.message }))
 }
@@ -42,9 +42,9 @@ export const getProductDetails = (id) => (dispatch) => {
 
 //get all products of a specific category
 
-export const getCategoryProducts = (category) => (dispatch) => {
+export const getCategoryProducts = (category) => async (dispatch) => {
     dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_REQUEST })
-    instance.get(`/products/category/${category}`)
+    await instance.get(`/products/category/${category}`)
         .then(res => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_FAIL, payload: err.message }))
 }
