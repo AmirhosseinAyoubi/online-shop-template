@@ -4,6 +4,7 @@ import { categoryReducer, productDetailsReducer, productsReducer, specificCatego
 import { sliderReducer } from "./reducers/sliderReducer.js"
 import { userLoginReducer, userSignUpReducer } from "./reducers/userReducer.js";
 
+//root reducer
 export const rootReducer = combineReducers({
     sliderList: sliderReducer,
     categoriesList: categoryReducer,
