@@ -16,25 +16,25 @@ import {
 
 //get products  categories
 
-export const getProductsCategories = () => async (dispatch) => {
+export const getProductsCategories = () => (dispatch) => {
     dispatch({ type: PRODUCTS_CATEGORY_LIST_REQUEST })
-    await instance.get('/products/categories')
+    instance.get('/products/categories')
         .then(res => dispatch({ type: PRODUCTS_CATEGORY_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCTS_CATEGORY_LIST_FAIL, payload: err.message }))
 }
 //get all products list
 
-export const getALLProducts = () => async (dispatch) => {
+export const getALLProducts = () => (dispatch) => {
     dispatch({ type: ALL_PRODUCTS_LIST_REQUEST })
-    await instance.get('/products')
+    instance.get('/products')
         .then(res => dispatch({ type: ALL_PRODUCTS_LIST_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: ALL_PRODUCTS_LIST_FAIL, payload: err.message }))
 }
 //get product details
 
-export const getProductDetails = (id) => async (dispatch) => {
+export const getProductDetails = (id) => (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
-    await instance.get(`/products/${id}`)
+    instance.get(`/products/${id}`)
         .then(res => dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: PRODUCT_DETAILS_FAIL, payload: err.message }))
 }
@@ -42,9 +42,9 @@ export const getProductDetails = (id) => async (dispatch) => {
 
 //get all products of a specific category
 
-export const getCategoryProducts = (category) => async (dispatch) => {
+export const getCategoryProducts = (category) => (dispatch) => {
     dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_REQUEST })
-    await instance.get(`/products/category/${category}`)
+    instance.get(`/products/category/${category}`)
         .then(res => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_SUCCESS, payload: res.data }))
         .catch(err => dispatch({ type: SPECIFIC_CATEGORIES_PRODUCTS_FAIL, payload: err.message }))
 }

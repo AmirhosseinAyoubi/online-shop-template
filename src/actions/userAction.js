@@ -10,9 +10,9 @@ import {
 
 // user login 
 
-export const loginUser = (username, password) => async (dispatch, getState) => {
+export const loginUser = (username, password) =>  (dispatch, getState) => {
     dispatch({ type: USER_LOGIN_REQUEST })
-    await instance.post("/auth/login", { username, password },
+     instance.post("/auth/login", { username, password },
         {
             headers: {
                 "Content-Type": "application/json"
@@ -29,9 +29,9 @@ export const userLogout = () => (dispatch) => {
 // user signup 
 //this is a fake sign up and doesn't save in database
 
-export const signUpUser = (username, email, password) => async (dispatch, getState) => {
+export const signUpUser = (username, email, password) =>  (dispatch, getState) => {
     dispatch({ type: USER_SIGNUP_REQUEST })
-    await instance.post("/users",
+     instance.post("/users",
         {
             "email": email,
             "username": username,
